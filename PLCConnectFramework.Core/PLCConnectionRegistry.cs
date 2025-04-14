@@ -19,6 +19,10 @@ namespace PLCConnectFramework.Core
             // Register Allen Bradley PLC connection
             PLCConnectionFactory.RegisterConnectionType("Allen Bradley", (name, ipAddress, port) => 
                 new AllenBradleyConnection(name, ipAddress, port));
+
+            // Register Siemens S7 Direct PLC connection
+            PLCConnectionFactory.RegisterConnectionType("Siemens S7 Direct", (name, ipAddress, port) => 
+                new SiemensS7DirectConnection(name, ipAddress, port));
         }
     }
 }
